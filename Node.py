@@ -1,10 +1,11 @@
 class Node():
-    def __init__(self, parentNode, state, action, pathCost, depth):
+    def __init__(self, parentNode, state, action, pathCost, depth, player):
         self.__parentNode = parentNode
         self.__state = state
         self.__action = action
         self.__pathCost = pathCost
         self.__depth = depth
+        self.__player = player
 
     def get_parent(self):
         return self.__parentNode
@@ -16,6 +17,8 @@ class Node():
         return self.__action
     def getDepth(self):
         return self.__depth
+    def getPlayer(self):
+        return self.__player
     def __lt__(self, other):
         return self.__pathCost < other.get_path_cost() #for comparison of nodes based on path cost
 def calculate_path_cost(node):
