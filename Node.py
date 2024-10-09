@@ -18,13 +18,13 @@ class Node():
         return self.__depth
     def __lt__(self, other):
         return self.__pathCost < other.get_path_cost() #for comparison of nodes based on path cost
-
 def calculate_path_cost(node):
     total_cost = 0
     while node is not None:
         total_cost += node.get_path_cost()
         node = node.get_parent()
     return total_cost
+
 def findSequence(node):
     actionList = []
     while node is not None:
