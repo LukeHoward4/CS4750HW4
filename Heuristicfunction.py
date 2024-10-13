@@ -34,3 +34,42 @@ def evaluate_state(state, player):
             (5 * one_side_open_2_in_a_row_me) - (2 * one_side_open_2_in_a_row_opp)
 
     return score
+
+def findSequences(playerSqs):
+    sequences = []
+    directions = [[0, 1], [1, 1], [1, 0], [0, -1], [-1, -1], [-1, 0], [-1, 1], [1, -1]]
+    for square in playerSqs:
+        adjacents = adjacentSquares(square, playerSqs, directions)
+        for adjacent in adjacents:
+            sequence = [square, adjacent]
+            direction = [[(adjacent[0] - square[0]), (adjacent[1]-square[1])]]
+
+            newSquare = adjacentSquares(adjacent, playerSqs, direction)
+            if(len(newSquare) == 1):
+                sequence.append(newSquare[0])
+            direction[0][0] *= -1
+            direction[0][1] *= -1
+            newSquare = adjacentSquares(square, playerSqs, direction)
+            if(len(newSquare) == 1):
+                sequence.insert(0, newSquare[0])
+            
+            reverse = []
+            for element in sequence:
+                reverse.append([element[0], element[1]])
+            reverse.reverse()
+
+            if((reverse not in sequences) and (sequence not in sequences)):
+                sequences.append(sequence)
+    return sequences
+def adjacentSquares(square, squareList, directions):
+    adjacentSq = []
+    for direction in directions:
+        adjacent = [(square[0] + direction[0]), (square[1] + direction[1])]
+        if(adjacent in squareList):
+            adjacentSq.append(adjacent)
+    return adjacentSq
+
+
+playerSqs = [[1, 2], [1, 1], [1, 0], [2, 1],[3, 5]]
+print([1, 2] in playerSqs)
+print(findSequences(playerSqs))
