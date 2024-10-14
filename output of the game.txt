@@ -1,0 +1,1015 @@
+place at [2, 5] (up-right)
+16
+place at [4, 5] (down-right)
+1
+place at [2, 6] (up-right)
+3
+place at [3, 6] (right)
+1
+place at [4, 6] (down-right)
+2
+
+16
+(2, 5)
+place at [2, 5] (up-right)
+6
+Action: place at [2, 5] (up-right)
+CPU time: 0.0956 seconds
+Nodes generated: 14
+
+Move 3:
+Current board:
+. . . . . .
+. . . . O .
+. . O X X .
+. . . . . .
+. . . . . .
+
+Player 1's turn:
+place at [2, 2] (up-left)
+6
+place at [3, 2] (left)
+3
+place at [4, 2] (down-left)
+2
+place at [2, 3] (up-left)
+13
+place at [4, 3] (down-left)
+7
+place at [1, 4] (up-left)
+2
+place at [2, 4] (up)
+8
+place at [4, 4] (down)
+2
+place at [1, 5] (up)
+5
+place at [4, 5] (down-right)
+6
+place at [1, 6] (up-right)
+5
+place at [2, 6] (up-right)
+3
+place at [3, 6] (right)
+6
+place at [4, 6] (down-right)
+1
+
+13
+(2, 3)
+place at [2, 3] (up-left)
+50
+Action: place at [2, 3] (up-left)
+CPU time: 0.0469 seconds
+Nodes generated: 15
+
+Move 4:
+Current board:
+. . . . . .
+. . X . O .
+. . O X X .
+. . . . . .
+. . . . . .
+
+Player 2's turn:
+place at [1, 2] (up-left)
+3
+place at [2, 2] (up-left)
+1
+place at [3, 2] (left)
+2
+place at [4, 2] (down-left)
+2
+place at [1, 3] (up)
+1
+place at [4, 3] (down)
+1
+place at [1, 4] (up-left)
+3
+place at [2, 4] (up-right)
+1
+place at [4, 4] (down-right)
+7
+place at [1, 5] (up)
+1
+place at [4, 5] (down-right)
+3
+place at [1, 6] (up-right)
+6
+place at [2, 6] (right)
+1
+place at [3, 6] (down-right)
+2
+place at [4, 6] (down-right)
+3
+
+7
+(4, 4)
+place at [4, 4] (down-right)
+29
+Action: place at [4, 4] (down-right)
+CPU time: 0.0918 seconds
+Nodes generated: 17
+
+Move 5:
+Current board:
+. . . . . .
+. . X . O .
+. . O X X .
+. . . O . .
+. . . . . .
+
+Player 1's turn:
+place at [1, 2] (up-left)
+2
+place at [2, 2] (left)
+3
+place at [3, 2] (down-left)
+2
+place at [4, 2] (down-left)
+3
+place at [1, 3] (up)
+2
+place at [4, 3] (down-left)
+3
+place at [5, 3] (down-left)
+1
+place at [1, 4] (up-right)
+2
+place at [2, 4] (up)
+3
+place at [5, 4] (down)
+1
+place at [1, 5] (up)
+1
+place at [4, 5] (down-right)
+1
+place at [5, 5] (down-right)
+8
+place at [1, 6] (up-right)
+4
+place at [2, 6] (up-right)
+8
+place at [3, 6] (right)
+6
+place at [4, 6] (down-right)
+9
+
+9
+(4, 6)
+place at [4, 6] (down-right)
+17
+Action: place at [4, 6] (down-right)
+CPU time: 0.0581 seconds
+Nodes generated: 17
+
+Move 6:
+Current board:
+. . . . . .
+. . X . O .
+. . O X X .
+. . . O . X
+. . . . . .
+
+Player 2's turn:
+place at [1, 2] (up-left)
+3
+place at [2, 2] (up-left)
+4
+place at [3, 2] (left)
+4
+place at [4, 2] (down-left)
+2
+place at [1, 3] (up)
+1
+place at [4, 3] (down)
+4
+place at [5, 3] (down-left)
+6
+place at [1, 4] (up-left)
+3
+place at [2, 4] (up-right)
+2
+place at [5, 4] (down)
+5
+place at [1, 5] (up)
+1
+place at [4, 5] (right)
+6
+place at [5, 5] (down-right)
+2
+place at [1, 6] (up-right)
+1
+place at [2, 6] (right)
+1
+place at [3, 6] (down-right)
+1
+place at [5, 6] (down)
+4
+
+6
+(5, 3)
+(4, 5)
+place at [4, 5] (right)
+15
+Action: place at [4, 5] (right)
+CPU time: 0.0740 seconds
+Nodes generated: 16
+
+Move 7:
+Current board:
+. . . . . .
+. . X . O .
+. . O X X .
+. . . O O X
+. . . . . .
+
+Player 1's turn:
+place at [1, 2] (up-left)
+1
+place at [2, 2] (left)
+11
+place at [3, 2] (down-left)
+2
+place at [4, 2] (down-left)
+1
+place at [1, 3] (up)
+2
+place at [4, 3] (down-left)
+5
+place at [5, 3] (down-left)
+3
+place at [1, 4] (up-right)
+7
+place at [2, 4] (up)
+3
+place at [5, 4] (down)
+1
+place at [1, 5] (up)
+3
+place at [5, 5] (down-left)
+4
+place at [1, 6] (up-right)
+4
+place at [2, 6] (up-right)
+3
+place at [3, 6] (right)
+7
+place at [5, 6] (down)
+13
+
+13
+(5, 6)
+place at [5, 6] (down)
+19
+Action: place at [5, 6] (down)
+CPU time: 0.1166 seconds
+Nodes generated: 15
+
+Move 8:
+Current board:
+. . . . . .
+. . X . O .
+. . O X X .
+. . . O O X
+. . . . . X
+
+Player 2's turn:
+place at [1, 2] (up-left)
+3
+place at [2, 2] (up-left)
+6
+place at [3, 2] (left)
+2
+place at [4, 2] (down-left)
+6
+place at [1, 3] (up)
+6
+place at [4, 3] (down)
+4
+place at [5, 3] (down-left)
+3
+place at [1, 4] (up-left)
+1
+place at [2, 4] (up-right)
+1
+place at [5, 4] (down)
+3
+place at [1, 5] (up)
+2
+place at [5, 5] (down-right)
+4
+place at [1, 6] (up-right)
+1
+place at [2, 6] (right)
+3
+place at [3, 6] (down-right)
+6
+
+6
+(2, 2)
+(4, 2)
+(1, 3)
+(3, 6)
+place at [1, 3] (up)
+20
+Action: place at [1, 3] (up)
+CPU time: 0.0458 seconds
+Nodes generated: 14
+
+Move 9:
+Current board:
+. . O . . .
+. . X . O .
+. . O X X .
+. . . O O X
+. . . . . X
+
+Player 1's turn:
+place at [1, 2] (up-left)
+3
+place at [2, 2] (left)
+5
+place at [3, 2] (down-left)
+1
+place at [4, 2] (down-left)
+1
+place at [4, 3] (down-left)
+2
+place at [5, 3] (down-left)
+8
+place at [1, 4] (up-right)
+1
+place at [2, 4] (up)
+1
+place at [5, 4] (down)
+2
+place at [1, 5] (up)
+1
+place at [5, 5] (down-left)
+3
+place at [1, 6] (up-right)
+3
+place at [2, 6] (up-right)
+4
+place at [3, 6] (right)
+3
+
+8
+(5, 3)
+place at [5, 3] (down-left)
+35
+Action: place at [5, 3] (down-left)
+CPU time: 0.0556 seconds
+Nodes generated: 14
+
+Move 10:
+Current board:
+. . O . . .
+. . X . O .
+. . O X X .
+. . . O O X
+. . X . . X
+
+Player 2's turn:
+place at [1, 2] (left)
+5
+place at [2, 2] (up-left)
+6
+place at [3, 2] (left)
+1
+place at [4, 2] (down-left)
+4
+place at [5, 2] (left)
+2
+place at [4, 3] (down)
+1
+place at [1, 4] (up-left)
+1
+place at [2, 4] (up-right)
+4
+place at [5, 4] (down)
+8
+place at [1, 5] (up)
+1
+place at [5, 5] (down-right)
+2
+place at [1, 6] (up-right)
+1
+place at [2, 6] (right)
+6
+place at [3, 6] (down-right)
+20
+
+20
+(3, 6)
+place at [3, 6] (down-right)
+35
+Action: place at [3, 6] (down-right)
+CPU time: 0.1079 seconds
+Nodes generated: 13
+
+Move 11:
+Current board:
+. . O . . .
+. . X . O .
+. . O X X O
+. . . O O X
+. . X . . X
+
+Player 1's turn:
+place at [1, 2] (up-left)
+1
+place at [2, 2] (left)
+1
+place at [3, 2] (down-left)
+10
+place at [4, 2] (up-left)
+4
+place at [5, 2] (left)
+4
+place at [4, 3] (down-left)
+4
+place at [1, 4] (up-right)
+18
+place at [2, 4] (up)
+5
+place at [5, 4] (right)
+4
+place at [1, 5] (up)
+11
+place at [5, 5] (down-left)
+10
+place at [1, 6] (up-right)
+5
+place at [2, 6] (up-right)
+1
+
+18
+(1, 4)
+place at [1, 4] (up-right)
+5
+Action: place at [1, 4] (up-right)
+CPU time: 0.1490 seconds
+Nodes generated: 12
+
+Move 12:
+Current board:
+. . O X . .
+. . X . O .
+. . O X X O
+. . . O O X
+. . X . . X
+
+Player 2's turn:
+place at [1, 2] (left)
+1
+place at [2, 2] (up-left)
+5
+place at [3, 2] (left)
+4
+place at [4, 2] (down-left)
+7
+place at [5, 2] (left)
+2
+place at [4, 3] (down)
+5
+place at [2, 4] (up-right)
+6
+place at [5, 4] (down)
+10
+place at [1, 5] (up)
+9
+place at [5, 5] (down-right)
+1
+place at [1, 6] (up-right)
+5
+place at [2, 6] (right)
+7
+
+10
+(5, 4)
+place at [5, 4] (down)
+14
+Action: place at [5, 4] (down)
+CPU time: 0.1320 seconds
+Nodes generated: 11
+
+Move 13:
+Current board:
+. . O X . .
+. . X . O .
+. . O X X O
+. . . O O X
+. . X O . X
+
+Player 1's turn:
+place at [1, 2] (up-left)
+9
+place at [2, 2] (left)
+1
+place at [3, 2] (down-left)
+4
+place at [4, 2] (up-left)
+3
+place at [5, 2] (left)
+4
+place at [4, 3] (down-left)
+6
+place at [2, 4] (up)
+3
+place at [1, 5] (right)
+4
+place at [5, 5] (down-left)
+17
+place at [1, 6] (up-right)
+6
+place at [2, 6] (up-right)
+6
+
+17
+(5, 5)
+place at [5, 5] (down-left)
+47
+Action: place at [5, 5] (down-left)
+CPU time: 0.1599 seconds
+Nodes generated: 10
+
+Move 14:
+Current board:
+. . O X . .
+. . X . O .
+. . O X X O
+. . . O O X
+. . X O X X
+
+Player 2's turn:
+place at [1, 2] (left)
+1
+place at [2, 2] (up-left)
+7
+place at [3, 2] (left)
+2
+place at [4, 2] (down-left)
+4
+place at [5, 2] (left)
+1
+place at [4, 3] (down)
+4
+place at [2, 4] (up-right)
+11
+place at [1, 5] (up)
+19
+place at [1, 6] (up-right)
+4
+place at [2, 6] (right)
+3
+
+19
+(1, 5)
+place at [1, 5] (up)
+19
+Action: place at [1, 5] (up)
+CPU time: 0.0537 seconds
+Nodes generated: 9
+
+Move 15:
+Current board:
+. . O X O .
+. . X . O .
+. . O X X O
+. . . O O X
+. . X O X X
+
+Player 1's turn:
+place at [1, 2] (up-left)
+3
+place at [2, 2] (left)
+7
+place at [3, 2] (down-left)
+1
+place at [4, 2] (up-left)
+3
+place at [5, 2] (left)
+5
+place at [4, 3] (down-left)
+8
+place at [2, 4] (up)
+5
+place at [1, 6] (up-right)
+4
+place at [2, 6] (up-right)
+2
+
+8
+(4, 3)
+place at [4, 3] (down-left)
+17
+Action: place at [4, 3] (down-left)
+CPU time: 0.1912 seconds
+Nodes generated: 8
+
+Move 16:
+Current board:
+. . O X O .
+. . X . O .
+. . O X X O
+. . X O O X
+. . X O X X
+
+Player 2's turn:
+place at [1, 2] (left)
+5
+place at [2, 2] (up-left)
+8
+place at [3, 2] (left)
+16
+place at [4, 2] (down-left)
+6
+place at [5, 2] (left)
+2
+place at [2, 4] (up-right)
+1
+place at [1, 6] (up-right)
+16
+place at [2, 6] (right)
+2
+
+16
+(3, 2)
+(1, 6)
+place at [1, 6] (up-right)
+40
+Action: place at [1, 6] (up-right)
+CPU time: 0.0474 seconds
+Nodes generated: 7
+
+Move 17:
+Current board:
+. . O X O O
+. . X . O .
+. . O X X O
+. . X O O X
+. . X O X X
+
+Player 1's turn:
+place at [1, 2] (up-left)
+2
+place at [2, 2] (left)
+2
+place at [3, 2] (down-left)
+6
+place at [4, 2] (up-left)
+15
+place at [5, 2] (left)
+2
+place at [2, 4] (up)
+12
+place at [2, 6] (up-right)
+14
+
+15
+(4, 2)
+place at [4, 2] (up-left)
+4
+Action: place at [4, 2] (up-left)
+CPU time: 0.0228 seconds
+Nodes generated: 9
+
+Move 18:
+Current board:
+. . O X O O
+. . X . O .
+. . O X X O
+. X X O O X
+. . X O X X
+
+Player 2's turn:
+place at [3, 1] (up-left)
+1
+place at [4, 1] (left)
+7
+place at [5, 1] (down-left)
+4
+place at [1, 2] (left)
+1
+place at [2, 2] (up-left)
+7
+place at [3, 2] (left)
+3
+place at [5, 2] (left)
+14
+place at [2, 4] (up-right)
+18
+place at [2, 6] (right)
+4
+
+18
+(2, 4)
+place at [2, 4] (up-right)
+22
+Action: place at [2, 4] (up-right)
+CPU time: 0.0202 seconds
+Nodes generated: 8
+
+Move 19:
+Current board:
+. . O X O O
+. . X O O .
+. . O X X O
+. X X O O X
+. . X O X X
+
+Player 1's turn:
+place at [3, 1] (up-left)
+9
+place at [4, 1] (left)
+9
+place at [5, 1] (down-left)
+14
+place at [1, 2] (up-left)
+5
+place at [2, 2] (left)
+4
+place at [3, 2] (down-left)
+13
+place at [5, 2] (left)
+10
+place at [2, 6] (up-right)
+8
+
+14
+(5, 1)
+place at [5, 1] (down-left)
+12
+Action: place at [5, 1] (down-left)
+CPU time: 0.0311 seconds
+Nodes generated: 7
+
+Move 20:
+Current board:
+. . O X O O
+. . X O O .
+. . O X X O
+. X X O O X
+X . X O X X
+
+Player 2's turn:
+place at [3, 1] (up-left)
+5
+place at [4, 1] (left)
+12
+place at [1, 2] (left)
+12
+place at [2, 2] (up-left)
+16
+place at [3, 2] (left)
+5
+place at [5, 2] (left)
+14
+place at [2, 6] (right)
+7
+
+16
+(2, 2)
+place at [2, 2] (up-left)
+10
+Action: place at [2, 2] (up-left)
+CPU time: 0.0680 seconds
+Nodes generated: 8
+
+Move 21:
+Current board:
+. . O X O O
+. O X O O .
+. . O X X O
+. X X O O X
+X . X O X X
+
+Player 1's turn:
+place at [1, 1] (up-left)
+2
+place at [2, 1] (left)
+6
+place at [3, 1] (up-left)
+4
+place at [4, 1] (left)
+9
+place at [1, 2] (up-left)
+3
+place at [3, 2] (down-left)
+6
+place at [5, 2] (left)
+2
+place at [2, 6] (up-right)
+1
+
+9
+(4, 1)
+place at [4, 1] (left)
+49
+Action: place at [4, 1] (left)
+CPU time: 0.0204 seconds
+Nodes generated: 7
+
+Move 22:
+Current board:
+. . O X O O
+. O X O O .
+. . O X X O
+X X X O O X
+X . X O X X
+
+Player 2's turn:
+place at [1, 1] (up-left)
+1
+place at [2, 1] (left)
+5
+place at [3, 1] (down-left)
+5
+place at [1, 2] (left)
+7
+place at [3, 2] (left)
+36
+place at [5, 2] (left)
+8
+place at [2, 6] (right)
+12
+
+36
+(3, 2)
+place at [3, 2] (left)
+39
+Action: place at [3, 2] (left)
+CPU time: 0.0314 seconds
+Nodes generated: 6
+
+Move 23:
+Current board:
+. . O X O O
+. O X O O .
+. O O X X O
+X X X O O X
+X . X O X X
+
+Player 1's turn:
+place at [1, 1] (up-left)
+4
+place at [2, 1] (left)
+26
+place at [3, 1] (up-left)
+7
+place at [1, 2] (up-left)
+30
+place at [5, 2] (left)
+1
+place at [2, 6] (up-right)
+3
+
+30
+(1, 2)
+place at [1, 2] (up-left)
+49
+Action: place at [1, 2] (up-left)
+CPU time: 0.0269 seconds
+Nodes generated: 5
+
+Move 24:
+Current board:
+. X O X O O
+. O X O O .
+. O O X X O
+X X X O O X
+X . X O X X
+
+Player 2's turn:
+place at [1, 1] (up-left)
+7
+place at [2, 1] (left)
+3
+place at [3, 1] (down-left)
+2
+place at [5, 2] (left)
+26
+place at [2, 6] (right)
+13
+
+26
+(5, 2)
+place at [5, 2] (left)
+27
+Action: place at [5, 2] (left)
+CPU time: 0.0441 seconds
+Nodes generated: 4
+
+Move 25:
+Current board:
+. X O X O O
+. O X O O .
+. O O X X O
+X X X O O X
+X O X O X X
+
+Player 1's turn:
+place at [1, 1] (left)
+22
+place at [2, 1] (down-left)
+5
+place at [3, 1] (up-left)
+18
+place at [2, 6] (up-right)
+25
+
+25
+(2, 6)
+place at [2, 6] (up-right)
+26
+Action: place at [2, 6] (up-right)
+CPU time: 0.0117 seconds
+Nodes generated: 3
+
+Move 26:
+Current board:
+. X O X O O
+. O X O O X
+. O O X X O
+X X X O O X
+X O X O X X
+
+Player 2's turn:
+place at [1, 1] (up-left)
+36
+place at [2, 1] (left)
+15
+place at [3, 1] (down-left)
+10
+
+36
+(1, 1)
+place at [1, 1] (up-left)
+4
+Action: place at [1, 1] (up-left)
+CPU time: 0.0132 seconds
+Nodes generated: 2
+
+Move 27:
+Current board:
+O X O X O O
+. O X O O X
+. O O X X O
+X X X O O X
+X O X O X X
+
+Player 1's turn:
+place at [2, 1] (down-left)
+20
+place at [3, 1] (up-left)
+12
+
+20
+(2, 1)
+place at [2, 1] (down-left)
+7
+Action: place at [2, 1] (down-left)
+CPU time: 0.0096 seconds
+Nodes generated: 1
+
+Move 28:
+Current board:
+O X O X O O
+X O X O O X
+. O O X X O
+X X X O O X
+X O X O X X
+
+Player 2's turn:
+place at [3, 1] (down-left)
+9999999
+
+9999999
+(3, 1)
+place at [3, 1] (down-left)
+20
+Action: place at [3, 1] (down-left)
+CPU time: 0.0075 seconds
+Nodes generated: 0
+
+Move 29:
+Current board:
+O X O X O O
+X O X O O X
+O O O X X O
+X X X O O X
+X O X O X X
+
+Player 1's turn:
+Traceback (most recent call last):
+  File "e:\CS4750HW4\game.py", line 66, in <module>
+    play_game()
+  File "e:\CS4750HW4\game.py", line 38, in play_game
+    best_move = minimax(current_node)
+                ^^^^^^^^^^^^^^^^^^^^^
+  File "e:\CS4750HW4\minimax.py", line 14, in minimax
+    maxVal = max(l1Dict.values())
+             ^^^^^^^^^^^^^^^^^^^^
+ValueError: max() arg is an empty sequence
