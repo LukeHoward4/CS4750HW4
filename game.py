@@ -1,7 +1,7 @@
 import time
 from State import State
 from Node import Node, expand
-from minimax import minimax
+from minimax import minimax2, minimax4
 
 
 def print_board(player_squares, opp_squares):
@@ -35,22 +35,33 @@ def play_game():
         # minmax algorithm
         if current_node.getPlayer() == 1:
             print("Player 1's turn:")
-            best_move = minimax(current_node)
+            best_move = minimax2(current_node, 1)
         else:
             print("Player 2's turn:")
-            best_move = minimax(current_node)
-
+            best_move = minimax4(current_node, 0)
+        x = best_move.getState().getHeuristic(current_node.getPlayer())
+        print(best_move.getAction())
+        print("Heuristic: " + str(x))
+        print(current_node.getPlayer())
+        print(best_move.getState().getPlayerSquares())
+        if(best_move.getState().getHeuristic(current_node.getPlayer()) == 1000):
+            print(f"Player {current_node.getPlayer()} wins!")
+            game_over = True
+        
         action = best_move.getAction()
         current_state = best_move.getState()
         current_node = best_move
-
+        
         end_time = time.time()
         cpu_time = end_time - start_time
-
+        
         print(f"Action: {action}")
         print(f"CPU time: {cpu_time:.4f} seconds")
         print(f"Nodes generated: {len(expand(current_node))}")
+        if(current_state.getHeuristic(current_node.getPlayer()) == 1000):
+            print(f"Player {current_node.getPlayer()} wins!")
         print()
+        
 
         move_number += 1
 

@@ -1,11 +1,21 @@
-import random
+
+"""
+h(n) = 200 * [number of two-side-open-3-in-a-row for me]
+     - 80  * [number of two-side-open-3-in-a-row for opponent]
+     + 150 * [number of one-side-open-3-in-a-row for me]
+     - 40  * [number of one-side-open-3-in-a-row for opponent]
+     + 20  * [number of two-side-open-2-in-a-row for me]
+     - 15  * [number of two-side-open-2-in-a-row for opponent]
+     + 5   * [number of one-side-open-2-in-a-row for me]
+     - 2   * [number of one-side-open-2-in-a-row for opponent]
+"""
 
 class State():
     def __init__(self, playerSquares, oppSquares):
         self.__playerSquares = playerSquares
         self.__oppSquares = oppSquares
-        self.__heuristic = self.genHeuristic()
-        
+        self.__playerHeuristic = self.genHeuristic(1)
+        self.__oppHeuristic = self.genHeuristic(0)
     #returns the coordinates of all squares currently held by the player in the form of a list of two element lists
     def getPlayerSquares(self):
         return self.__playerSquares
@@ -31,7 +41,120 @@ class State():
             return True
         else:
             return False
-    def getHeuristic(self):
-        return self.__heuristic
-    def genHeuristic(self):
-        return random.randint(1, 50)
+    def genHeuristic(self, num):
+        return evaluate_state(self, num)
+    def getHeuristic(self, num):
+        if(num == 1):
+            return self.__playerHeuristic
+        else:
+            return self.__oppHeuristic
+    def regenHeur(self):
+        self.__playerHeuristic = self.genHeuristic(1)
+        self.__oppHeuristic = self.genHeuristic(0)
+
+def evaluate_state(state, player):
+    if player == 1:  # Player X
+        player_squares = state.getPlayerSquares()
+        opp_squares = state.getOppSquares()
+    else:  # Player O
+        player_squares = state.getOppSquares()
+        opp_squares = state.getPlayerSquares()
+    playerSeqs = findSequenceValues(player_squares, opp_squares)
+    oppSeqs = findSequenceValues(opp_squares, player_squares)
+    if(playerSeqs[0] == 1):
+        return 1000
+    if(oppSeqs[0] == 1):
+        return -1000
+    if(len(player_squares) + len(opp_squares) == 30):
+        return 0
+    two_side_open_3_in_a_row_me = playerSeqs[3]
+    two_side_open_3_in_a_row_opp = oppSeqs[3]
+    one_side_open_3_in_a_row_me = playerSeqs[4]
+    one_side_open_3_in_a_row_opp = oppSeqs[4]
+    two_side_open_2_in_a_row_me = playerSeqs[1]
+    two_side_open_2_in_a_row_opp = oppSeqs[1]
+    one_side_open_2_in_a_row_me = playerSeqs[2]
+    one_side_open_2_in_a_row_opp = oppSeqs[2]
+
+    score = (200 * two_side_open_3_in_a_row_me) - (80 * two_side_open_3_in_a_row_opp) + \
+            (150 * one_side_open_3_in_a_row_me) - (40 * one_side_open_3_in_a_row_opp) + \
+            (20 * two_side_open_2_in_a_row_me) - (15 * two_side_open_2_in_a_row_opp) + \
+            (5 * one_side_open_2_in_a_row_me) - (2 * one_side_open_2_in_a_row_opp)
+
+    return score
+
+def inBorder(querySpace):
+    if(querySpace[0] > 6 or querySpace[0] < 1 or querySpace[1] > 5 or querySpace[1] < 1):
+        return False
+    else:
+        return True
+
+def findSequences(playerSqs):
+    sequences = []
+    directions = [[0, 1], [1, 1], [1, 0], [0, -1], [-1, -1], [-1, 0], [-1, 1], [1, -1]]
+    for square in playerSqs:
+        adjacents = adjacentSquares(square, playerSqs, directions)
+        for adjacent in adjacents:
+            sequence = [square, adjacent]
+            direction = [[(adjacent[0] - square[0]), (adjacent[1]-square[1])]]
+            
+            newSquare = adjacentSquares(adjacent, playerSqs, direction)
+            if(len(newSquare) == 1):
+                sequence.append(newSquare[0])
+            direction[0][0] *= -1
+            direction[0][1] *= -1
+            newSquare = adjacentSquares(square, playerSqs, direction)
+            if(len(newSquare) == 1):
+                sequence.insert(0, newSquare[0])
+            
+            reverse = []
+            for element in sequence:
+                reverse.append([element[0], element[1]])
+            reverse.reverse()
+
+            if((reverse not in sequences) and (sequence not in sequences)):
+                sequences.append(sequence)
+    return sequences
+def adjacentSquares(square, squareList, directions):
+    adjacentSq = []
+    for direction in directions:
+        adjacent = [(square[0] + direction[0]), (square[1] + direction[1])]
+        if(adjacent in squareList):
+            adjacentSq.append(adjacent)
+    return adjacentSq
+def findSequenceValues(playerSqs, opponentSqs):
+    sequences = findSequences(playerSqs)
+    returnVal = [0,0,0,0,0]
+    for sequence in sequences:
+        openSpaces = 0
+        direction = [(sequence[0][0] - sequence[1][0]), (sequence[0][1] - sequence[1][1])]
+        querySpace = [sequence[0][0] + direction[0], sequence[0][1] + direction[1]]
+        if querySpace not in opponentSqs and inBorder(querySpace):
+            openSpaces += 1
+        direction = [sequence[-1][0] - sequence[-2][0], sequence[-1][1] - sequence[-2][1]]
+        querySpace = [sequence[-1][0] + direction[0], sequence[-1][1] + direction[1]]
+        if querySpace not in opponentSqs and inBorder(querySpace):
+            openSpaces += 1
+        if len(sequence) == 2:
+            if openSpaces == 2:
+                returnVal[1] += 1
+            elif openSpaces == 1:
+                returnVal[2] += 1
+        elif len(sequence) == 3:
+            if openSpaces == 2:
+                returnVal[3] += 1
+            elif openSpaces == 1:
+                returnVal[4] += 1
+        elif len(sequence) == 4:
+            returnVal[0] = 1
+            return returnVal
+    return returnVal
+        
+playerSqs = [[1, 2], [1, 1], [1, 3], [2, 2], [2, 3], [2, 1],[3, 5]]
+oppSqs = [[3, 1], [1, 5]]
+myState = State(playerSqs, oppSqs)
+print([1, 2] in playerSqs)
+print(findSequences(playerSqs))
+print(findSequenceValues(playerSqs, oppSqs))
+print(evaluate_state(myState, 1))
+

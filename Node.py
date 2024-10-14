@@ -43,6 +43,8 @@ def expand(current):
     successors = []
     state = current.getState()  
     depth = current.getDepth() + 1
+    if(state.getHeuristic(1) == 1000 or state.getHeuristic(0) == 1000):
+        return successors
     current_player = current.getPlayer()  
     newMoves = []
     # Get the list of squares occupied by current player and opponent
@@ -69,10 +71,14 @@ def expand(current):
             new_state.addPlayerSquare(move)
         else:
             new_state.addOppSquare(move)
+        new_state.regenHeur()
         
         # Create a new node with the updated state, move, path cost, and depth
         action = f"place at {move} ({direction})"  # will give o/p like "place at [2, 3] (up)"
         path_cost = 1.0  # cost = 1 for each move
+        player = 0
+        if current_player != 1:
+            player = 1
         new_node = Node(current, new_state, action, path_cost, depth, 3 - current_player)  
         
         successors.append(new_node)
