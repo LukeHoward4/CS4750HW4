@@ -1,3 +1,5 @@
+
+import State
 class Node():
     def __init__(self, parentNode, state, action, pathCost, depth, player):
         self.__parentNode = parentNode
@@ -42,7 +44,7 @@ def expand(current):
     state = current.getState()  
     depth = current.getDepth() + 1
     current_player = current.getPlayer()  
-    
+    newMoves = []
     # Get the list of squares occupied by current player and opponent
     if current_player == 1:
         player_squares = state.getPlayerSquares()
@@ -59,8 +61,9 @@ def expand(current):
     
     # For each possible move, create a new node with the updated state
     for move, direction in empty_squares_with_directions:
-        new_state = copy_state(state)  
-        
+        new_state = copy_state(state)
+        if move in newMoves:
+            continue
         # Update the new state with the current player's move
         if current_player == 1:
             new_state.addPlayerSquare(move)
@@ -73,6 +76,7 @@ def expand(current):
         new_node = Node(current, new_state, action, path_cost, depth, 3 - current_player)  
         
         successors.append(new_node)
+        newMoves.append(move)
     
     return successors
 
@@ -101,6 +105,6 @@ def get_adjacent_empty_squares_with_directions(player_squares, opp_squares):
     return empty_squares_with_directions
 
 def copy_state(state):
-    new_state = State(state.getPlayerSquares().copy(), state.getOppSquares().copy())
+    new_state = State.State(state.getPlayerSquares().copy(), state.getOppSquares().copy())
     return new_state
 

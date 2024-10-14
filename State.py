@@ -1,7 +1,10 @@
+import random
+
 class State():
     def __init__(self, playerSquares, oppSquares):
         self.__playerSquares = playerSquares
         self.__oppSquares = oppSquares
+        self.__heuristic = self.genHeuristic()
         
     #returns the coordinates of all squares currently held by the player in the form of a list of two element lists
     def getPlayerSquares(self):
@@ -28,3 +31,7 @@ class State():
             return True
         else:
             return False
+    def getHeuristic(self):
+        return self.__heuristic
+    def genHeuristic(self):
+        return random.randint(1, 50)

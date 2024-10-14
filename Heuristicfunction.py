@@ -43,7 +43,7 @@ def findSequences(playerSqs):
         for adjacent in adjacents:
             sequence = [square, adjacent]
             direction = [[(adjacent[0] - square[0]), (adjacent[1]-square[1])]]
-
+            
             newSquare = adjacentSquares(adjacent, playerSqs, direction)
             if(len(newSquare) == 1):
                 sequence.append(newSquare[0])
