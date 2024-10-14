@@ -37,6 +37,8 @@ def minimax2(startNode, player):
                 smallestY = y
     print("Generated " + str(nodesGenerated) + " nodes")
     return returnNode
+#Minimax4 implements a four ply minimax algorithm that determines which node should be chosen.
+#
 def minimax4(startNode, player):
     l1 = Node.expand(startNode)
     l1Dict = {}
@@ -56,10 +58,8 @@ def minimax4(startNode, player):
                     minVal = findMin(l4, player)
                     l3Values.append(minVal)
             if(len(l3Values) > 0):
-                #print("Max l3: " + str(max(l3Values)))
                 l2Values.append(max(l3Values))
         if(len(l2Values) > 0):
-            #print("Min l2: " + str(min(l2Values)))
             l1Dict[node] = min(l2Values)
         
     maxVal = max(l1Dict.values())

@@ -40,10 +40,6 @@ def play_game():
             print("Player 2's turn:")
             best_move = minimax4(current_node, 0)
         x = best_move.getState().getHeuristic(current_node.getPlayer())
-        print(best_move.getAction())
-        print("Heuristic: " + str(x))
-        print(current_node.getPlayer())
-        print(best_move.getState().getPlayerSquares())
         if(best_move.getState().getHeuristic(current_node.getPlayer()) == 1000):
             print(f"Player {current_node.getPlayer()} wins!")
             game_over = True
@@ -57,9 +53,6 @@ def play_game():
         
         print(f"Action: {action}")
         print(f"CPU time: {cpu_time:.4f} seconds")
-        print(f"Nodes generated: {len(expand(current_node))}")
-        if(current_state.getHeuristic(current_node.getPlayer()) == 1000):
-            print(f"Player {current_node.getPlayer()} wins!")
         print()
         
 

@@ -43,7 +43,7 @@ def expand(current):
     successors = []
     state = current.getState()  
     depth = current.getDepth() + 1
-    if(state.getHeuristic(1) == 1000 or state.getHeuristic(0) == 1000):
+    if(state.getHeuristic(1) == 1000 or state.getHeuristic(0) == -1000):
         return successors
     current_player = current.getPlayer()  
     newMoves = []

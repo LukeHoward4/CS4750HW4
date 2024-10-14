@@ -150,11 +150,5 @@ def findSequenceValues(playerSqs, opponentSqs):
             return returnVal
     return returnVal
         
-playerSqs = [[1, 2], [1, 1], [1, 3], [2, 2], [2, 3], [2, 1],[3, 5]]
-oppSqs = [[3, 1], [1, 5]]
-myState = State(playerSqs, oppSqs)
-print([1, 2] in playerSqs)
-print(findSequences(playerSqs))
-print(findSequenceValues(playerSqs, oppSqs))
-print(evaluate_state(myState, 1))
+
 
